@@ -28,11 +28,3 @@ jobs:
         run: npm test
         env:
           FORCE_COLOR: true
-
-      # Optional: Upload coverage report
-      - name: ⬆️ Upload coverage report
-        if: success()
-        uses: codecov/codecov-action@v4
-        with:
-          fail_ci_if_error: true
-          token: ${{ secrets.CODECOV_TOKEN }}
